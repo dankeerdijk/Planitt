@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="planitt.PopupSendRequest">
+   <StackLayout BackgroundColor="Teal"
+                Margin="35,100,35,250"
+               VerticalOptions="Center">
+        <Frame 
+              >
+            <StackLayout>
+                 <Label Text="stuur vriendschapverzoek aan"
+                        
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"/>
+                 <Label Text="ewaa"
+                        HorizontalOptions="Center"
+                        Margin="10"
+                        x:Name="namePlace"/>
+                <Button Text="verstuur"
+                        Clicked="Handle_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

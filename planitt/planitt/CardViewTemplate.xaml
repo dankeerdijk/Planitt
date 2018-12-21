@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="planitt.CardViewTemplate">
+    <ContentView.Content>
+        <Frame Margin="10"
+               >
+            <StackLayout Spacing="20">
+                <Button Text="X"
+                        TextColor="Red"
+                        HorizontalOptions="End"/>
+                <Label Text="user"
+                       HorizontalOptions="Center"/>
+                <Label Text="titel"
+                       HorizontalOptions="Center"/>
+                
+               <StackLayout Orientation="Horizontal"
+                            Margin="0,50,0,0">
+                    <Button Text="accepteren"
+                            WidthRequest="120"
+                            HorizontalOptions="Start"
+                            BorderColor="Silver"
+                            BorderWidth="1"
+                            Padding="20"/>
+                    <Button Text="negeer"
+                            WidthRequest="120"
+                            HorizontalOptions="EndAndExpand"
+                            BorderColor="Silver"
+                            BorderWidth="1"
+                            Padding="20"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

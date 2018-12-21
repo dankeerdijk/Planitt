@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="planitt.CreateHouseHoldPage">
+   <StackLayout Margin="10,0"
+               >
+        <Label Text="maak nieuwe huishouden"
+               HorizontalOptions="Center"
+               FontSize="25"
+               Margin="0,60"/>
+        <StackLayout Orientation="Horizontal"
+                     >
+           
+            <Label Text="uw naam:"/>
+            <Entry Placeholder="name"
+                   WidthRequest="150"/>
+        </StackLayout>
+         <StackLayout Orientation="Horizontal"
+                    >
+            <Label Text="huishouden naam:"/>
+            <Entry Placeholder="name"
+                   WidthRequest="150"/>
+        </StackLayout>
+          <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="StartAndExpand">
+            <Label Text="voeg leden toe:"/>
+            <Button Text="nieuw"
+                    HeightRequest="5"/>
+            
+        </StackLayout>
+          <ContentView HeightRequest="150">
+            <ListView x:Name="friendsListview">
+                 <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Username}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ContentView>
+            <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="StartAndExpand">
+            <Label Text="beheer uw taken:"/>
+            <Button Text="beheer"
+                    Clicked="Handle_Clicked"
+                    StyleId="edit"
+                    HeightRequest="5"/>
+        </StackLayout>
+        <ContentView HeightRequest="150">
+            <ListView x:Name="taskListview">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding name}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ContentView>
+             <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="StartAndExpand">
+            <Label Text="maak de plannig:"/>
+            <Button Text="create"
+                    StyleId="create"
+                    HeightRequest="5"
+                    Clicked="Handle_Clicked"/>
+        </StackLayout>
+        <Button Text="create household"
+                TextColor="White"
+                BorderWidth="2"
+                BorderColor="Black"
+                CornerRadius="80"
+                Margin="0,80,0,0"
+                BackgroundColor="{StaticResource Key=ButtonBackground}"
+                />
+        
+   </StackLayout>
+</ContentPage>

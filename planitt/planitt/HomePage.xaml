@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="planitt.HomePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Order="Primary"  Priority="0" Clicked="Handle_Clicked_1"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+        <Frame BorderColor="#5985b2"
+               CornerRadius="20"
+               Margin="20"
+               >
+        <StackLayout Spacing="20"
+                     HorizontalOptions="FillAndExpand"
+                     BackgroundColor="##ff3f70"
+                     >
+                <Frame HasShadow="false"
+                       BorderColor="Black"
+                       CornerRadius="50"
+                       
+                       HorizontalOptions="FillAndExpand">
+                     
+                  <StackLayout>
+            <Image x:Name="welkomtext"
+                   HeightRequest="100"/>
+            <Image x:Name="appLogo"
+                   HeightRequest="150">
+            </Image>
+             </StackLayout>
+          
+                </Frame>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Spacing="50">
+                   
+                <StackLayout>
+                    <Label Text="inbox"
+                           HorizontalOptions="Center"/>
+                        <Frame BackgroundColor="#cce5ff"
+                             >
+                    <Image x:Name="inboxImage"
+                           StyleId="invite">
+  
+                    </Image>
+                        </Frame>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="nieuwe contact"
+                           />
+                        <Frame BackgroundColor="#cce5ff"
+                           >
+                    <Image x:Name="addUserImage"
+                           StyleId="addUser">
+                     
+                    </Image>
+                        </Frame>
+                </StackLayout>
+            </StackLayout>
+                <StackLayout HorizontalOptions="Center"
+                             Margin="0,0,0,50">
+            <Label Text="maak nieuwe huishouden aan"/>
+                    <Frame BackgroundColor="#cce5ff"
+                        >
+            <Image x:Name="addHouseholdImage"
+                   StyleId="createHousehold">
+                        
+                </Image>
+                    </Frame>
+        </StackLayout>
+            <Button Text="swipe naar links om naar overzicht te gaan  ->"
+                    x:Name="goToHouseHold"
+                    Clicked="Handle_Clicked"/>
+        </StackLayout>
+  </Frame>
+    </ContentPage.Content>
+</ContentPage>

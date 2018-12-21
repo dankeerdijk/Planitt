@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="XamForms.Controls.Calendar" Version="1.1.1" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.5.180" />
+    <PackageReference Include="Microcharts.Forms" Version="0.7.1" />
+    <PackageReference Include="Microcharts" Version="0.7.1" />
+    <PackageReference Include="Microsoft.Azure.Mobile.Client" Version="4.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="MainPage.xaml.cs" />
+    <Compile Remove="Xamarin\Forms\ISwipeGestureController.cs" />
+    <Compile Remove="creat.xaml.cs" />
+    <Compile Remove="model\FriendRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Media\" />
+    <Folder Include="model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Media\preview.jpg" />
+    <None Remove="Media\inbox.png" />
+    <None Remove="Media\addUser.png" />
+    <None Remove="Media\addHousehold.png" />
+    <None Remove="Media\greyBackground.jpg" />
+    <None Remove="Media\AppLogo.png" />
+    <None Remove="Media\welkomText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Media\preview.jpg" />
+    <EmbeddedResource Include="Media\inbox.png" />
+    <EmbeddedResource Include="Media\addUser.png" />
+    <EmbeddedResource Include="Media\addHousehold.png" />
+    <EmbeddedResource Include="Media\greyBackground.jpg" />
+    <EmbeddedResource Include="Media\AppLogo.png" />
+    <EmbeddedResource Include="Media\welkomText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.iOS">
+      <HintPath>..\..\..\..\..\..\Library\Frameworks\Xamarin.iOS.framework\Versions\Current\lib\mono\Xamarin.iOS\Xamarin.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="planitt.ChooseTask">
+  <StackLayout Margin="30,50,0,0">
+        <Label Text="pas uw taken aan"/>
+       <ContentView>
+            <ListView x:Name="taskViewList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding name}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+      </ContentView>
+        <Button Text="Add"
+                Clicked="Handle_Clicked"/>
+  </StackLayout>
+</ContentPage>
